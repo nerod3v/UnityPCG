@@ -582,9 +582,17 @@ PrefabInstance:
       propertyPath: inputMove
       value: 
       objectReference: {fileID: 1993774297}
+    - target: {fileID: 2818786803502957449, guid: 5a920e7c19649fb42b41324589cb2648, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4861904211433747996, guid: 5a920e7c19649fb42b41324589cb2648, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235626418600307299, guid: 5a920e7c19649fb42b41324589cb2648, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8148968355028609835, guid: 5a920e7c19649fb42b41324589cb2648, type: 3}
       propertyPath: inputAtack
