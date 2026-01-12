@@ -158,9 +158,15 @@ MonoBehaviour:
   - {fileID: 6864669281828000580, guid: 44cee3f6c6609e544a6aa51413868c90, type: 3}
   - {fileID: 7850861493116727225, guid: f2ac46cec27d51d43b5dee82801170c8, type: 3}
   - {fileID: 2286291642136062562, guid: bd1fc96a289e34b42857f401f1ec17c0, type: 3}
+  FinalsRooms:
+  - {fileID: 2039977549399059129, guid: d28f35035dd78de4ca8212b93fbeb724, type: 3}
+  - {fileID: 8528633954427593917, guid: 19424d588dd27e447b1a3554d8364cda, type: 3}
+  - {fileID: 80051957492809023, guid: 18a08efda206a7646bf8296f8c2812a9, type: 3}
+  - {fileID: 6177724531054048492, guid: b245cd11e4cb95f40aff84cb5dadc8b2, type: 3}
   MotherGrid: {fileID: 1414534824}
-  RoomsHeight: 9
-  RoomsWeight: 11
+  RoomsHeight: 11
+  RoomsWeight: 19
+  MaximRooms: 0
 --- !u!4 &245931538
 Transform:
   m_ObjectHideFlags: 0
@@ -307,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -696,7 +702,7 @@ Transform:
   m_GameObject: {fileID: 2139212141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -2, z: 0}
+  m_LocalPosition: {x: 0.13, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:

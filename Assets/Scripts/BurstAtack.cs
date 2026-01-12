@@ -9,14 +9,15 @@ public class BurstAtack : MonoBehaviour
     private float clock = 0;
     private float increase = 0.005f;
     private float velocity = 9f;
+    float DirectionX = 0f;
+    float DirectionY = 0f;
     void Start()
     {
-        Destroy(gameObject, 4);
+        Destroy(gameObject, 3.5f);
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerTransform = player.GetComponent<Transform>();
     }
-
     void Update()
     {
         clock += Time.deltaTime;
@@ -24,16 +25,22 @@ public class BurstAtack : MonoBehaviour
     }
     void burstActions()
     {
+        
         if (clock <= 1)
         {
             transform.localScale += new Vector3(increase, increase, increase);
         }
-        else if (clock <= 3)
+        else if (clock <= 2)
         {
-            float DirectionX = playerTransform.position.x;
-            float DirectionY = playerTransform.position.y;
-            rb.linearVelocity = new Vector2(DirectionX - transform.position.x, DirectionY - transform.position.y);
-            clock = 3.1f;
+            Vector2 directionNormalized = (playerTransform.position - transform.position).normalized;
+            rb.linearVelocity = directionNormalized * velocity;
+            clock = 2f;
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+            transform.localScale += new Vector3(increase * 2, increase * 2, increase * 2);
+            clock = 0f;
         }
     }
 }
