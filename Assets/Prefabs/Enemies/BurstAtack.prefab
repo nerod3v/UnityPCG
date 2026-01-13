@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa37636399be734a9c24a1ef11e89e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BurstAtack
-  player: {fileID: 4861904211433747996, guid: 5a920e7c19649fb42b41324589cb2648, type: 3}
+  Enemy: {fileID: 3621193458245966676, guid: 2a8a9701048cf9345801bc7dae9af3d3, type: 3}
+  burstDuration: 4
 --- !u!50 &5467861608749389718
 Rigidbody2D:
   serializedVersion: 5

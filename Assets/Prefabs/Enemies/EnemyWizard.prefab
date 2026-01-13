@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BurstAtackController
   burst: {fileID: 7379405360388529455, guid: 51b5046c6ceddca4ab1487453fc2ddd6, type: 3}
-  player: {fileID: 0}
+  enemy: {fileID: 3621193458245966676}
+  distanceForEnemyX: 0.35
+  distanceForEnemyY: 0.15
 --- !u!1 &3621193458245966676
 GameObject:
   m_ObjectHideFlags: 0
