@@ -48,15 +48,16 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.3f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\WizardCode\BurstAtack.cs" />
     <Compile Include="Assets\Prefabs\Detectors\DetectorPlayer.cs" />
+    <Compile Include="Assets\Scripts\WizardCode\WizardLogic.cs" />
     <Compile Include="Assets\Scripts\CameraLogic.cs" />
     <Compile Include="Assets\Scripts\RoomsManager.cs" />
     <Compile Include="Assets\Scripts\PlayerActions.cs" />
+    <Compile Include="Assets\Scripts\WizardCode\BurstAtackController.cs" />
     <Compile Include="Assets\Scripts\EnemiesManager.cs" />
     <Compile Include="Assets\Scripts\BulletCollision.cs" />
     <Compile Include="Assets\Scripts\ProjectileController.cs" />
-    <Compile Include="Assets\Scripts\BurstAtack.cs" />
-    <Compile Include="Assets\Scripts\BurstAtackController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
