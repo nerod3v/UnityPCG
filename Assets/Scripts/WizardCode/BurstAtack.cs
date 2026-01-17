@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class BurstAtack : MonoBehaviour
@@ -11,7 +12,6 @@ public class BurstAtack : MonoBehaviour
     public float burstDuration = 4f;
     void Start()
     {
-        Destroy(gameObject, burstDuration);
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerTransform = player.GetComponent<Transform>();
@@ -31,9 +31,10 @@ public class BurstAtack : MonoBehaviour
         {
             Shot();     
         }
-        else if(timer >= burstDuration - 0.5f)
+        else if(timer >= burstDuration - increase)
         {
             Expliod();
+            Destroy(gameObject, 0.35f);
             
         }
         timer += Time.deltaTime;
@@ -47,17 +48,23 @@ public class BurstAtack : MonoBehaviour
     {
         Vector2 directionNormalized = (playerTransform.position - transform.position).normalized;
         rb.linearVelocity = directionNormalized * velocity;
+        timer = burstDuration/2;
         
     }
     void Expliod()
     {
-        transform.localScale += new Vector3(increase * 3, increase * 3, increase * 3);
+        transform.localScale += new Vector3(increase * 20, increase * 20, increase * 20);
         rb.linearVelocity = Vector2.zero;
     }
     
+    
     void OnTriggerEnter2D(Collider2D other)
     {
-        Expliod();
+        if (timer >= burstDuration / 3)
+        {
+            timer = burstDuration - increase;
+        }
+        
     }
 }
 
