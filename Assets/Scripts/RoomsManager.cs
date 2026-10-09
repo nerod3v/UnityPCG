@@ -16,12 +16,13 @@ public class RoomsManager : MonoBehaviour
     private Transform destineRoom;
     public float RoomsHeight = 11f;
     public float RoomsWeight = 19f;
-    public float MaximRooms = 0f;
+    public float CounterRooms = 0f;
+    public float MaximRooms = 8f;
 
     void Start()
     { 
         actionsPlayer = FindFirstObjectByType<PlayerActions>();
-        logicCamera = FindFirstObjectByType<CameraLogic>();
+        logicCamera = FindFirstObjectByType<CameraLogic>(); 
         managerEnemies  = FindFirstObjectByType<EnemiesManager>();
         Vector2 initialPosition = new Vector2(0,0);
         RoomsPositions.Add(new Vector2Int(0,0));
@@ -68,7 +69,7 @@ public class RoomsManager : MonoBehaviour
             List<GameObject> RoomList = Rooms;
             while (bestRoom == false)
             {
-                if (MaximRooms >= 8)
+                if (CounterRooms >= MaximRooms)
                 {
                     RoomList = FinalsRooms;
                 }
@@ -89,7 +90,7 @@ public class RoomsManager : MonoBehaviour
                     {
                         detector.originRoom = positionGrid;
                     }
-                    MaximRooms += 1;
+                    CounterRooms += 1;
                     actionsPlayer.TeleportRoom(worldPosition, thisDetector);
                     logicCamera.ChangePosition(worldPosition);
                     managerEnemies.GenerateEnemy(worldPosition);

@@ -7,7 +7,7 @@ public class BurstAtack : MonoBehaviour
     private GameObject player;
     private Transform playerTransform;
     private float timer = 0;
-    private float increase = 0.005f;
+    private float increase = 0.0005f;
     private float velocity = 9f;
     public float burstDuration = 4f;
     void Start()
@@ -53,7 +53,7 @@ public class BurstAtack : MonoBehaviour
     }
     void Expliod()
     {
-        transform.localScale += new Vector3(increase * 20, increase * 20, increase * 20);
+        transform.localScale += new Vector3(increase * 10, increase * 10, increase * 10);
         rb.linearVelocity = Vector2.zero;
     }
     

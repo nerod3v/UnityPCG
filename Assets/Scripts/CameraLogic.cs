@@ -15,6 +15,6 @@ public class CameraLogic : MonoBehaviour
     }
     public void ChangePosition(Vector2 newPosition)
     {
-        transform.position = new Vector3(newPosition.x + 0.5f, newPosition.y + 0.5f, -10);
+        transform.position = new Vector3(newPosition.x + 0.5f, newPosition.y + 0.5f, -1);
     }
 }

@@ -172,7 +172,8 @@ MonoBehaviour:
   MotherGrid: {fileID: 1414534824}
   RoomsHeight: 11
   RoomsWeight: 19
-  MaximRooms: 0
+  CounterRooms: 0
+  MaximRooms: 8
 --- !u!4 &245931538
 Transform:
   m_ObjectHideFlags: 0
@@ -320,7 +321,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: -10}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []

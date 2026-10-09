@@ -13,7 +13,7 @@ public class DetectorPlayer : MonoBehaviour
     }
     public detectorTypes thisDetectorType;
     public Vector2Int originRoom;
-    private RoomsManager managerRooms; 
+    private RoomsManager managerRooms;
     void Start()
     {
         managerRooms = FindFirstObjectByType<RoomsManager>();
